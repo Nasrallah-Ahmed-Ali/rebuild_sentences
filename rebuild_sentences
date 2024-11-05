@@ -1,0 +1,11 @@
+def rebuild_sentence(words, lengths):
+    # Creating list
+    truncated_words = []
+    
+    # Loop through the words and their corresponding lengths
+    for word, length in zip(words, lengths):
+        # Append the truncated version of the word
+        truncated_words.append(word[:length])
+    
+    # Join the truncated words with a space and return the result
+    return ' '.join(truncated_words)
